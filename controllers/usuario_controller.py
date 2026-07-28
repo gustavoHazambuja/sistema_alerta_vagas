@@ -5,6 +5,7 @@ from models.usuario_model import Usuario
 from schemas.usuario_schema import UsuarioCriar, UsuarioResposta
 
 
+
 router = APIRouter(prefix="/usuarios", tags=["Usuários"])
 
 
