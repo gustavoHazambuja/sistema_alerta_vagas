@@ -1,7 +1,11 @@
 from pydantic import BaseModel
 
+class UsuarioCriar(BaseModel):
+    nome: str
+    email: str
+    senha: str
 
-class Usuario(BaseModel):
+class UsuarioResposta(BaseModel):
     id: int
     nome: str
     email: str

@@ -2,14 +2,21 @@ from pydantic import BaseModel
 from typing import Optional
 
 
-class Vaga(BaseModel):
-    id: int
+class VagaCriar(BaseModel):
     titulo: str
     localizacao: str
     modalidade: str
-    salario_min: Optional[str] = None
+    salario_min: Optional[float] = None
     area: str
 
-    class config:
-        from_attributes = True
+
+class VagaResposta(VagaCriar):
+      id: int
+
+      class Config:
+           from_attributes = True
+
+
+
+
 

@@ -16,4 +16,4 @@ class AlertaResposta(AlertaCriar):
 
 
     class Config:
-        from_attributes = True # Permite converter do Model direto
+        from_attributes = True # Tradutor entre dicionários e objetos para o pydantic
