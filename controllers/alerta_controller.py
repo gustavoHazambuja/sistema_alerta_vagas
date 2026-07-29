@@ -22,7 +22,7 @@ def listar_alertas_do_usuario(usuario_id: int, db: Session = Depends(get_db)):
     return db.query(Alerta).filter(Alerta.usuario_id == usuario_id).all()
 
 
-@router.patch("/{alerta_id}", response_model=AlertaResposta)
+@router.patch("/{alerta_id}/pausar", response_model=AlertaResposta)
 def pausar_alerta(alerta_id: int, db: Session = Depends(get_db)):
 
     alerta = db.query(Alerta).filter(Alerta.id == alerta_id).fist()
