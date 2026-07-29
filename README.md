@@ -62,7 +62,7 @@ http://localhost:8000/docs
 - Usuários: POST /usuarios/criar
 - Usuários: GET /usuarios/{usuario_id}
 - Usuários: GET /usuários/
-- Alertas: POST /alertas/criar
+- Alertas: POST /alertas/criar/{usuario_id}
 - Alertas: GET /alertas/{usuario_id}
 - Alertas: PATCH /alertas/{alerta_id}/pausar
 - Alertas: DELETE /alertas/{alerta_id}
