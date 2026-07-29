@@ -12,7 +12,7 @@ router = APIRouter(prefix="/usuarios", tags=["Usuários"])
 @router.post("/criar", response_model=UsuarioResposta)
 def criar_usuario(dados: UsuarioCriar, db: Session = Depends(get_db)):
 
-    ja_existe = db.query(Usuario).filter(Usuario.email == dados.email).fist()
+    ja_existe = db.query(Usuario).filter(Usuario.email == dados.email).first()
     if ja_existe:
         raise HTTPException(status_code=400, detail="Email já cadastrado.")
 
@@ -30,7 +30,7 @@ def criar_usuario(dados: UsuarioCriar, db: Session = Depends(get_db)):
 
 @router.get("/{usuario_id}", response_model=UsuarioResposta)
 def buscar_usuario(usuario_id: int, db: Session = Depends(get_db)):
-    usuario = db.query(Usuario).filter(Usuario.id == usuario_id).fist()
+    usuario = db.query(Usuario).filter(Usuario.id == usuario_id).first()
 
     if not usuario:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")

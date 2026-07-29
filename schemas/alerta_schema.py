@@ -6,7 +6,7 @@ class AlertaCriar(BaseModel):
     palavra_chave: Optional[str] = None
     localizacao: Optional[str] = None
     modalidade: Optional[str] = None
-    salario_min_desejado: Optional[str] = None
+    salario_min_desejado: Optional[float] = None
 
 
 class AlertaResposta(AlertaCriar):

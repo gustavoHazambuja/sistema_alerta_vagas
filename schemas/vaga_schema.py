@@ -4,6 +4,7 @@ from typing import Optional
 
 class VagaCriar(BaseModel):
     titulo: str
+    empresa: str
     localizacao: str
     modalidade: str
     salario_min: Optional[float] = None
