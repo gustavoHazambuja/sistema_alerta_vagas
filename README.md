@@ -7,7 +7,12 @@ Sistema de Alerta de Vagas é uma aplicação backend que consiste em uma API pa
 Nela podemos cadastrar usuários, criar e gerenciar alertas de busca, pausar ou remover alertas existentes, e cadastrar vagas que disparam automaticamente uma regra de negócio (matching) responsável por comparar a vaga com todos os alertas ativos e gerar notificações apenas para os que realmente combinam, evitando duplicidade de avisos para o mesmo usuário.
  
 O projeto segue uma arquitetura em camadas (Models, Schemas, Controllers e Services), separando a representação dos dados, a validação de entrada/saída e as regras de negócio de matching.
- 
+
+## Criando Alerta
+![Criando Alerta](https://github.com/gustavoHazambuja/Images/blob/main/Alerta_Vagas/Captura%20de%20tela%202026-08-02%20133554.png)
+
+## Listando Alertas do Usuário
+![Listando Alertas](https://github.com/gustavoHazambuja/Images/blob/main/Alerta_Vagas/Captura%20de%20tela%202026-08-02%20133635.png)
 # Tecnologias utilizadas
 ## Back end
 - Python
